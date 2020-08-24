@@ -1,0 +1,45 @@
+#!/bin/bash
+
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
+mkcd () {
+  mkdir "$1"
+  cd "$1"
+}
+
+alias py="python3"
+alias untar="tar -zxvf "
+alias wget="wget -c "
+alias getpass="openssl rand -base64 20"
+alias ping="ping -c 5"
+alias update="sudo apt-get -y update && sudo apt-get -y upgrade"
+
+# become root #
+alias root="sudo -i"
+alias su="sudo -i"
+alias hgrep="history | grep"
+
+alias bashrc="code ~/.bashrc"
+alias zshrc="code ~/.bashrc"
+alias fuck="sudo !!"
+alias mkcd="mkcd "
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+
+function cu {
+    local count=$1
+    if [ -z "${count}" ]; then
+        count=1
+    fi
+    local path=""
+    for i in $(seq 1 ${count}); do
+        path="${path}../"
+    done
+    cd $path
+}
