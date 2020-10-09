@@ -44,9 +44,13 @@ install git
 install htop
 install vim
 install wget
+install tree
+install thefuck
+install gnupg ca-certificates
 
 ### tools
-install vlc skype
+install vlc skype ubuntu-restricted-addons
+
 # install skype
 
 ### repositories
@@ -72,9 +76,12 @@ install synaptic
 
 ### stacer
 
-wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb
-sudo dpkg --install Stacer_1.0.4_amd64.deb
+# wget https://github.com/oguzhaninan/Stacer/releases/download/v1.0.4/Stacer_1.0.4_amd64.deb
+# sudo dpkg --install Stacer_1.0.4_amd64.deb
 
+sudo add-apt-repository ppa:oguzhaninan/stacer
+sudo apt-get update
+sudo apt-get install stacer
 ### gaming
 
 install steam
@@ -82,17 +89,18 @@ install steam
 ### flatpack
 
 install flatpak
+install snap
 
 ### gimp
 
 install gimp
 
 ### Fonts
-install Ubuntu-restricted-extras
-
+install Ubuntu-restricted-extras font-manager
 ### Keepass
 
-install keepassx
+install keepassxc
+# https://ssd.eff.org/fr/module/guide-pratique-utiliser-keepassxc
 
 ### batetry life saver
 
@@ -104,8 +112,8 @@ pip3 install numpy
 
 ### terminator
 
-sudo add-apt-repository ppa:gnome-terminator
-sudo apt-get update -y
+# sudo add-apt-repository ppa:gnome-terminator
+# sudo apt-get update -y
 sudo apt-get install terminator
 
 ### c++
@@ -117,7 +125,23 @@ sudo apt install build-essential
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+### Fun
 
+install cmatrix sl neofetch hollywood
+
+### Ubuntu cleaner
+
+sudo add-apt-repository ppa:gerardpuig/ppa
+sudo apt-get update
+sudo apt-get install ubuntu-cleaner -y
+
+### preloader
+
+install preload
+
+### bleachbit
+
+install bleachbit
 
 # sudo apt-get  install git gnome-tweak-tool synaptic wine64 -y
 # git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
@@ -146,6 +170,7 @@ echo
 echo "Cleaning..."
 sudo apt upgrade -y
 sudo apt-get autoclean
+sudo apt-get clean
 sudo apt-get autoremove
 
 ###################################
@@ -168,7 +193,7 @@ echo "Finish! All done!"
 echo
 
 ###################################
-# Lokk for more !
+# Look for more !
 ###################################
 echo
 echo "https://www.tecmint.com/things-to-do-after-installing-ubuntu-20-04/"
@@ -198,3 +223,11 @@ sudo reboot
 # dropbox
 # spotify
 # change host name
+# prefix usr/local
+# telegram
+# Organize My Files
+
+# theme https://www.reddit.com/r/unixporn/comments/it4fut/gnome_material_shell_one_year_update/
+# https://material-shell.com/#material-shell
+# https://linuxhint.com/25_best_gnome_extensions/
+# https://itsfoss.com/speed-up-ubuntu-1310/

@@ -31,9 +31,10 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 install apt-transport-https
 sudo apt update
-
-
 install code
 
-#generate list of extention with code --list-extensions
-# vs_install 
+
+### node js
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs

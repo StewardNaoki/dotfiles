@@ -10,28 +10,6 @@ mkcd () {
   cd "$1"
 }
 
-alias py="python3"
-alias untar="tar -zxvf "
-alias wget="wget -c "
-alias getpass="openssl rand -base64 20"
-alias ping="ping -c 5"
-alias update="sudo apt-get -y update && sudo apt-get -y upgrade"
-
-# become root #
-alias root="sudo -i"
-alias su="sudo -i"
-alias hgrep="history | grep"
-
-alias bashrc="code ~/.bashrc"
-alias zshrc="code ~/.bashrc"
-alias fuck="sudo !!"
-alias mkcd="mkcd "
-
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-
 function cu {
     local count=$1
     if [ -z "${count}" ]; then
@@ -43,3 +21,51 @@ function cu {
     done
     cd $path
 }
+
+function google() {
+    open -na "Google Chrome" --args "https://www.google.com/search?q=$*"
+}
+function stackoverflow() {
+    open -na "Google Chrome" --args "https://www.google.com/search?q=site:stackoverflow.com $*"
+}
+
+
+alias py="python3"
+alias untar="tar -zxvf "
+alias wget="wget -c "
+alias getpass="openssl rand -base64 20"
+alias ping="ping -c 5"
+alias update="sudo apt-get -y update && sudo apt-get -y upgrade"
+alias root="sudo -i"
+alias hgrep="history | grep"
+alias bashrc="code ~/.bashrc"
+alias zshrc="code ~/.bashrc"
+alias fuck="sudo !!"
+alias mkcd="mkcd "
+alias h='history'
+alias backup='rsync -arvh --info=progress2'
+
+alias sl=ls
+alias la='ls -AF'       # Compact view, show hidden
+alias ll='ls -alF'
+alias l='ls -a'
+alias l1='ls -1'
+alias lt='ls --human-readable --size -1 -S --classify'
+
+
+alias edit="$EDITOR"
+alias pager="$PAGER"
+
+alias q='exit'
+
+alias ..='cd ..'         # Go up one directory
+alias cd..='cd ..'       # Common misspelling for going up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up three directories
+alias -- -='cd -'        # Go back
+
+# Shell History
+
+
+
+
